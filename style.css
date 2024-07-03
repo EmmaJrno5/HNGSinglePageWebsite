@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #DAE3E5; */
+    
+  }
+
+  section{
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #028090;
+    margin-bottom: 100px; 
+  }
+  header{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .goal-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    width: 90%;
+    margin-inline: auto;
+    
+  }
+  .goal-item:last-of-type{
+    grid-column: span 2;
+  }
+  .goal-item {
+    background: #ffffff;
+    padding: 20px 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .goal-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .details {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .detail {
+    padding: 10px 0;
+    font-size: 1em;
+    color: #666;
+    position: relative;
+    
+  }
+  
+  .detail::marker{
+    color: #00aaff;
+  }
+  /* Slack Information Section */
+.slack-info-container{
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+}
+.slack-info-container h2{
+    margin-bottom: 1rem;
+}
+.slack-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.slack-info div{
+    align-self: flex-end;
+}
+.slack-info img{
+    width: 100%;
+}
+.slack-info-container p>span{
+     font-weight: 700;
+}
+/* Footer */
+footer{
+    background-color: #028090;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #ffffff;
+}
+.links ul{
+    list-style: none;
+    display: flex;
+}
+.links ul>li>a{
+    margin-inline-end: 10px;
+    color: #4604fc;
+}
+.links ul>li>a:hover{
+    color: #F4EDED;
+}
+.date {
+    width: 30%;
+
+}
+
+/* Media Queries */
+  @media (max-width: 768px) {
+    .goal-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+      font-size: 1.2em;
+    }
+  
+    .detail {
+      font-size: 0.9em;
+    }
+    .slack-info{
+        display: grid;
+        place-items: center;
+        
+    }
+    .slack-info p>span{
+        display: block;
+    }
+    .links li{
+        font-size: 0.8rem;
+    }
+    footer{
+        justify-content: unset;
+        flex-direction: column;
+        gap: 20px
+    }
+  }
+  
